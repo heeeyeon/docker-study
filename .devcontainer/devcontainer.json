@@ -1,0 +1,5 @@
+{
+  "name": "Node.js + React + TypeScript",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
+  "postCreateCommand": "npm install"
+}
