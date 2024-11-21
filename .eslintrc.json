@@ -8,8 +8,7 @@
   "env": {
     "browser": true,
     "node": true,
-    "commonjs": true,
-    "es2022": true
+    "commonjs": true
   },
   "globals": {
     "_": true,
@@ -18,23 +17,27 @@
   "plugins": [
     "import",
     "html",
-    // "react",
+    "react",
     "@typescript-eslint"
   ],
   "extends": [
     "airbnb-base",
     "prettier",
-    // "react-app",
+    "react-app",
     "plugin:@typescript-eslint/recommended"
   ],
   "overrides": [
     {
-      "files": ["*.js"],
+      "files": [
+        "*.js"
+      ],
       "parser": "@babel/eslint-parser",
       "parserOptions": {
         "requireConfigFile": false,
         "babelOptions": {
-          "presets": ["@babel/preset-env"]
+          "presets": [
+            "@babel/preset-env"
+          ]
         }
       }
     }
@@ -50,10 +53,13 @@
     "no-nested-ternary": "off",
     "max-classes-per-file": "off",
     "consistent-return": "off",
-    "no-restricted-syntax": ["off", "ForOfStatement"],
+    "no-restricted-syntax": "off",
     "prefer-arrow-callback": "error",
     "require-await": "error",
-    "arrow-parens": ["error", "as-needed"],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
     "no-param-reassign": [
       "error",
       {
@@ -85,7 +91,7 @@
     ],
     "import/extensions": [
       "error",
-      "always",
+      "ignorePackages",
       {
         "ts": "never",
         "tsx": "never",
@@ -93,9 +99,33 @@
         "jsx": "never"
       }
     ],
+    "import/no-unresolved": "error",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".tsx"
+        ]
+      }
+    ],
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "error",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "warn"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
   }
 }

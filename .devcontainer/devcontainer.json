@@ -1,5 +1,20 @@
 {
-  "name": "Node.js + React + TypeScript",
+  "name": "Node.js + wReact + TypeScript",
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
-  "postCreateCommand": "npm install"
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "HTMLHint.vscode-htmlhint",
+        "oderwat.indent-rainbow",
+        "MS-CEINTL.vscode-language-pack-ko",
+        "ionutvmi.path-autocomplete",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-next",
+        "shardulm94.trailing-spaces",
+        "redhat.vscode-xml"
+      ]
+    }
+  }
 }
